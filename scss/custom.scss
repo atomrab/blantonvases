@@ -1,0 +1,23 @@
+
+// $card-bg: #fdf8ee;
+$body-bg: #fdf8ee;
+$jumbotron-bg: white;
+
+// modifying the color palette
+$theme-colors: (
+    "primary": #d5a765,
+    "secondary": #48505b,
+    "light": #fdf8ee,
+    "tertiary": #a07b44,
+    "teal": #298db5,
+    "blue-gray": #64789c,
+);
+
+.mr-auto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+// Bootstrap and its default variables
+@import "../node_modules/bootstrap/scss/bootstrap";
+
