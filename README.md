@@ -4,3 +4,17 @@ Repo for the development of an online project focused on the Greek vases at the 
 [3DHOP test page 1](3DHOP_all_tools.html)
 
 [3DHOP test page 2](3dtest2.html)
+
+[1980_16](1980_16_3dhop.html)
+
+[1980_36](1980_36_3dhop.html)
+
+[1980_37](1980_37_3dhop.html)
+
+[1980_40](1980_40_3dhop.html)
+
+[1981_48](1981_48_3dhop.html)
+
+[1984_39](1984_39_3dhop.html)
+
+[Classics krater](classics_krater_3dhop.html)
