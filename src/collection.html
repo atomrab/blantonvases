@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+    crossorigin="anonymous"> -->
+
+  <!-- custom CSS -->
+  <link rel="stylesheet" href="./stylesheets/styles.css" />
+  <!-- bootstrap CSS -->
+  <link rel="stylesheet" href="./stylesheets/bootstrap.css" />
+
+  <title>Collection</title>
+</head>
+
+<body>
+  <div class="content-area-landing">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-xxl navbar-dark custom-navbar">
+      <!-- <div class="brand-nav-wrapper"> -->
+      <a class="col-md-4 navbar-brand custom-brand" href="./index.html">
+        <div class="logo-and-brand">
+          <div class="logo-div">
+            <img class="" src="./assets/logo.svg" />
+          </div>
+          <div class="brand-div">Blanton VASE</div>
+        </div>
+      </a>
+
+
+
+      <!-- Hamburger button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible nav items -->
+      <div class="collapse navbar-collapse offset-md-2 justify-content-end align-self-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./showcase.html">Exhibit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./collection.html">Collection</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./timeline.html">3D Modeling</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./timeline.html">Timeline</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">Credit</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="underline"></div>
+    <!-- end navbar -->
+
+    <div class="gallery-wrapper">
+
+      <!-- Collection Hero -->
+      <section class="collection-hero">
+        <h1 class="collection-title">The Collection</h1>
+        <p class="collection-intro">
+          Here you can learn more about each object's provenance, interpretation, and description.
+          Quisque faucibus ex sapien vitae pellentesque sem placerat.
+        </p>
+
+        <div class="collection-controls">
+          <div for="collectionFilter" class="filter-label">Filter: </div>
+          <select id="collectionFilter" class="collection-filter">
+            <option value="all">Collection (All)</option>
+            <option value="with">With 3D Model</option>
+            <option value="without">Without 3D Model</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Gallery grid: 21 items (first 9 = have 3D model) -->
+      <section class="collection-gallery" id="collectionGallery" aria-live="polite">
+        <!-- Generate 21 cards. Update image src and link href as needed -->
+
+        <!-- 1980.31 -->
+        <div class="gallery-card" data-has-model="false">
+          <a class="gallery-link" href="./gallery-entries/1980.31.html" title="1980.31">
+            <img class="gallery-img" src="./assets/gallery/1980.31.jpg" alt="1980.31">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Black-Figure Neck Amphora</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1980.32 -->
+        <div class="gallery-card" data-has-model="false">
+          <a class="gallery-link" href="./gallery-entries/1980.32.html" title="1980.32">
+            <img class="gallery-img" src="./assets/gallery/1980.32.jpg" alt="1980.32">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Neck Amphora of Panathenaic Shape</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1980.33 -->
+        <div class="gallery-card" data-has-model="false">
+          <a class="gallery-link" href="./gallery-entries/1980.33.html" title="1980.33">
+            <img class="gallery-img" src="./assets/gallery/1980.33.jpg" alt="1980.33">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Black-Figure Oinochoe</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1980.34 -->
+        <div class="gallery-card" data-has-model="false">
+          <a class="gallery-link" href="./gallery-entries/1980.34.html" title="1980.34">
+            <img class="gallery-img" src="./assets/gallery/1980.34.jpg" alt="1980.34">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Black-Figure Kyathos</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1980.35 -->
+        <div class="gallery-card" data-has-model="false">
+          <a class="gallery-link" href="./gallery-entries/1980.35.html" title="1980.35">
+            <img class="gallery-img" src="./assets/gallery/1980.35_top.jpg" alt="1980.35">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Black-Figure Cup, Type A</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1980.36 3d -->
+        <div class="gallery-card" data-has-model="true">
+          <a class="gallery-link" href="./gallery-entries/1980.36.html" title="1980.36">
+            <img class="gallery-img" src="./assets/gallery/1980.36_front.jpg" alt="1980.36">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Early Corinthian Round Aryballos (quatrefoil)</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1980.37 3d -->
+        <div class="gallery-card" data-has-model="true">
+          <a class="gallery-link" href="./gallery-entries/1980.37.html" title="1980.37">
+            <img class="gallery-img" src="./assets/gallery/1980.37_front.jpg" alt="1980.37">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">(Early) Corinthian Round Aryballos (oil bottle)</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1980.38 -->
+        <div class="gallery-card" data-has-model="false">
+          <a class="gallery-link" href="./gallery-entries/1980.38.html" title="1980.38">
+            <img class="gallery-img" src="./assets/gallery/1980.38_top.jpg" alt="1980.38">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Red-Figure Kylix</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1980.39 -->
+        <div class="gallery-card" data-has-model="false">
+          <a class="gallery-link" href="./gallery-entries/1980.39.html" title="1980.39">
+            <img class="gallery-img" src="./assets/gallery/1980.39_front.jpg" alt="1980.39">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Red-Figure Column Krater</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1980.40 3d -->
+        <div class="gallery-card" data-has-model="true">
+          <a class="gallery-link" href="./gallery-entries/1980.40.html" title="1980.40">
+            <img class="gallery-img" src="./assets/gallery/1980.40_front.jpg" alt="1980.40">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Red-Figure Bell Krater</div>
+            <div class="gallery-date">ca. 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1980.41 -->
+        <div class="gallery-card" data-has-model="false">
+          <a class="gallery-link" href="./gallery-entries/1980.41.html" title="1980.41">
+            <img class="gallery-img" src="./assets/gallery/1980.41_left.jpg" alt="1980.41">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Red-Figure Askos</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1980.42 -->
+        <div class="gallery-card" data-has-model="false">
+          <a class="gallery-link" href="./gallery-entries/1980.42.html" title="1980.42">
+            <img class="gallery-img" src="./assets/gallery/1980.42_top.jpg" alt="1980.42">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Red-Figure Kylix</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1980.43 -->
+        <div class="gallery-card" data-has-model="false">
+          <a class="gallery-link" href="./gallery-entries/1980.43.html" title="1980.43">
+            <img class="gallery-img" src="./assets/gallery/1980.43_front.jpg" alt="1980.43">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Squat Lekythos</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1980.61 3d -->
+        <div class="gallery-card" data-has-model="true">
+          <a class="gallery-link" href="./gallery-entries/1980.61.html" title="1980.61">
+            <img class="gallery-img" src="./assets/gallery/1980.61_front.jpg" alt="1980.61">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Red-Figure Calpis</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1980.62 -->
+        <div class="gallery-card" data-has-model="false">
+          <a class="gallery-link" href="./gallery-entries/1980.62.html" title="1980.62">
+            <img class="gallery-img" src="./assets/gallery/1980.62_top_a.jpg" alt="1980.62">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Red-Figure Apulian Plate</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1980.63 -->
+        <div class="gallery-card" data-has-model="false">
+          <a class="gallery-link" href="./gallery-entries/1980.63.html" title="1980.63">
+            <img class="gallery-img" src="./assets/gallery/1980.63_front.jpg" alt="1980.63">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Red-Figure Lekythos</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1981.48 -->
+        <div class="gallery-card" data-has-model="false">
+          <a class="gallery-link" href="./gallery-entries/1981.48.html" title="1981.48">
+            <img class="gallery-img" src="./assets/gallery/1981.48.jpg" alt="1981.48">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Lebes Gamikos</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1982.5 -->
+        <div class="gallery-card" data-has-model="false">
+          <a class="gallery-link" href="./gallery-entries/1982.5.html" title="1982.5">
+            <img class="gallery-img" src="./assets/gallery/1982.5_front.jpg" alt="1982.5">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Apulian Polychrome Lekythos (Hellenistic period)</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1984.39 3d -->
+        <div class="gallery-card" data-has-model="true">
+          <a class="gallery-link" href="./gallery-entries/1984.39.html" title="1984.39">
+            <img class="gallery-img" src="./assets/gallery/1984.39-a.jpg" alt="1984.39">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Corinthian Stemless Cup (kylix)</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1988.28 -->
+        <div class="gallery-card" data-has-model="false">
+          <a class="gallery-link" href="./gallery-entries/1988.28.html" title="1988.28">
+            <img class="gallery-img" src="./assets/gallery/1988.28_front.jpg" alt="1988.28">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Gnathia Pelike with Winged Eros and Hare</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1988.29 -->
+        <div class="gallery-card" data-has-model="false">
+          <a class="gallery-link" href="./gallery-entries/1988.29.html" title="1988.29">
+            <img class="gallery-img" src="./assets/gallery/1988.29_front.jpg" alt="1988.29">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Campanian Red-Figure Kantharos</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+        <!-- 1988.30 -->
+        <div class="gallery-card" data-has-model="false">
+          <a class="gallery-link" href="./gallery-entries/1988.30.html" title="1988.30">
+            <img class="gallery-img" src="./assets/gallery/1988.30.jpg" alt="1988.30">
+          </a>
+          <div class="gallery-meta">
+            <div class="gallery-name">Lot of 25 Red-Figure Fragments</div>
+            <div class="gallery-date">circa 420–410 BCE</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- start footer -->
+      <div class="underline"></div>
+      <div class="footer">
+        Copyright © 2025 Department of Classics of the University of Texas at Austin and Blanton Museum of Art <br> All
+        models are made available under a CC-0 license <br> For questions email:
+        arabinow at utexas.edu
+      </div>
+      <!-- end footer -->
+      <!-- Optional JavaScript; choose one of the two! -->
+
+      <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+      <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
+      <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> -->
+
+      <script type="text/javascript" src="../scripts/global.js"></script>
+      <script src="../scripts/gallery-viewer.js"></script>
+      <script src="./scripts/collection.js"></script>
+</body>
+
+</html>

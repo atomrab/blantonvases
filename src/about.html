@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+    crossorigin="anonymous"> -->
+
+  <!-- custom CSS -->
+  <link rel="stylesheet" href="./stylesheets/styles.css" />
+  <!-- bootstrap CSS -->
+  <link rel="stylesheet" href="./stylesheets/bootstrap.css" />
+
+  <title>Credit</title>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-xxl navbar-dark custom-navbar">
+    <!-- <div class="brand-nav-wrapper"> -->
+    <a class="col-md-4 navbar-brand custom-brand" href="./index.html">
+      <div class="logo-and-brand">
+        <div class="logo-div">
+          <img class="" src="./assets/logo.svg" />
+        </div>
+        <div class="brand-div">Blanton VASE</div>
+      </div>
+    </a>
+
+    <!-- Hamburger button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible nav items -->
+    <div class="collapse navbar-collapse offset-md-2 justify-content-end align-self-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./showcase.html">Exhibit</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./collection.html">Collection</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./timeline.html">3D Modeling</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./timeline.html">Timeline</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="underline"></div>
+  <!-- end navbar -->
+
+
+  <!-- Hero video (50vh × 100vw) -->
+  <section class="about-video" aria-hidden="false">
+    <video id="about-hero-video" autoplay muted loop playsinline
+      style="width:100vw; height:55vh; object-fit:cover; display:block;">
+      <source src="./assets/videos/header_krater.mp4" type="video/mp4">
+    </video>
+    <div class="video-mask" aria-hidden="true"></div>
+  </section>
+
+
+  <!-- Left-tab section -->
+  <section class="left-tab-section">
+    <div class="container">
+      <div class="row">
+        <aside class="col-md-3 left-tabs" role="tablist" aria-orientation="vertical">
+          <button class="lt-tab active" data-target="panel-1" aria-selected="true">About</button>
+          <button class="lt-tab" data-target="panel-2">People</button>
+          <button class="lt-tab" data-target="panel-3">Equipment</button>
+          <button class="lt-tab" data-target="panel-4">Related Projects</button>
+          <button class="lt-tab" data-target="panel-5">Further Resources</button>
+        </aside>
+
+        <div class="col-md-9 left-tab-content">
+          <h2 class="lt-title">About the Project</h2>
+          <div class="lt-pane active" id="panel-1">
+            <p>Blanton VASE [...] is a collaborative initiative between the UT Austin faculty, PhD Students and
+              the Blanton Museum of Art, aimed at capturing and disseminating 3D models of Greek Vases in
+              permanent storage using LiDAR and photogrammetric imaging technology. The collection of
+              Greek vases housed at the Blanton spans a wide range of periods, typologies, and regionalities,
+              providing an invaluable teaching tool for the public, and especially for undergraduate students
+              looking to explore ancient ceramics. Considering this, Blanton VASE [...] was established
+              to present this collection to classrooms and students around the world through virtual and printed
+              3D models, while immersing vases within their wider cultural and temporal contexts.
+
+            </p>
+          </div>
+          <div class="lt-pane" id="panel-2">
+            <p>This project developed during a graduate seminar titled <a
+                href="https://github.com/atomrab/blantonvases">“Digital Approaches to
+                Classical
+                Antiquity”</a> in the Fall 2025 and materialized through efforts of Adam
+              Rabinowitz and a group of PhD students from that class. We are deeply grateful for the generous
+              support and contributions from our partnering individuals and organizations listed below.<br><br>Project
+              Team:</p>
+            <ul style="list-style-type: square ;">
+              <li>Adam Rabinowitz, UT Austin Classics, (Project Lead)</li>
+              <li>Delaney Fisher, UT Austin Classics, (Website Designer, 3D Capture)</li>
+              <li>John Qin, UT Austin Art History, (Web Developer, 3D Capture)</li>
+              <li>Matthew Wabler, UT Austin Classics, (Geospatial and Temporal Visualization,
+                Data Conversion, 3D Capture)</li>
+              <li>Anthony Bronzo, UT Austin Classics, (Photogrammetric Image Data Processing,
+                3D Capture)</li>
+              <li>Kelsey Kistner, UT Austin Classics, (3D Printing Designer)</li>
+              <li>Benjamin Menard, UT Austin Classics, (Content Writer, 3D Capture)</li>
+              <li>Wilhelmina Loder, UT Austin Geography, (Scrum Master, LiDAR Capture)</li>
+              <li>Amber Kearns, UT Austin Classics, (Documentation, 3D Capture)</li>
+            </ul>
+          </div>
+          <div class="lt-pane" id="panel-3">
+            <p>Equipment: placeholder content describing equipment and methods used.</p>
+          </div>
+          <div class="lt-pane" id="panel-4">
+            <p>Related Projects: placeholder list and links to similar work.</p>
+          </div>
+          <div class="lt-pane" id="panel-5">
+            <p>Further resources and bibliography placeholder text.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- start footer -->
+  <div class="underline"></div>
+  <div class="footer">
+    Copyright © 2025 Department of Classics of the University of Texas at Austin and Blanton Museum of Art <br> All
+    models are made available under a CC-0 license <br> For questions email:
+    arabinow at utexas.edu
+  </div>
+  <!-- end footer -->
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> -->
+
+  <script type="text/javascript" src="../scripts/global.js"></script>
+  <script src="../scripts/gallery-viewer.js"></script>
+  <script src="./scripts/collection.js"></script>
+  <script src="./scripts/left-tabs.js"></script>
+</body>
+
+</html>
