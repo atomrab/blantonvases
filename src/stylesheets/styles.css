@@ -58,8 +58,7 @@ html h3,
 html h5 {
   color: #a07b44;
 }
-html p,
-html li {
+html p {
   color: #000000;
   max-width: 100%;
   font-size: 1.75rem;
@@ -87,79 +86,6 @@ html .btn {
 }
 html .jumbotron {
   margin-bottom: 0;
-}
-/* --- Left-tabs styles (moved from left-tabs.css) --- */
-.site-bg {
-  background: #000;
-  color: #fff;
-}
-body {
-  background: #000 !important;
-  color: #fff;
-}
-.site-bg a,
-body a {
-  color: #eeba2b;
-}
-.left-tab-section {
-  padding: 3rem 0;
-  margin: 2rem 0;
-}
-.left-tabs {
-  padding-right: 1rem;
-}
-.lt-tab {
-  display: block;
-  width: 100%;
-  text-align: left;
-  padding: 0.75rem 1rem;
-  margin-bottom: 0.5rem;
-  background: transparent;
-  border: 0px solid rgba(255, 186, 43, 0);
-  color: #fff;
-  font-family: 'HelveticaNeue-medium', sans-serif;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-.lt-tab:hover {
-  color: #eeba2b;
-}
-.lt-tab.active {
-  color: #eeba2b;
-  font-weight: 700;
-}
-.left-tab-content {
-  padding-left: 2rem;
-}
-.lt-title {
-  font-family: 'Lovelace-bold', serif;
-  font-weight: 300;
-  font-size: 3.5rem;
-  color: #eeba2b;
-  margin-bottom: 1rem;
-}
-.lt-pane {
-  display: none;
-  color: #fff;
-  font-family: 'HelveticaNeue-medium', sans-serif;
-  font-size: 1.05rem;
-}
-.lt-pane p,
-.lt-pane li {
-  color: #ffffff;
-}
-.lt-pane.active {
-  display: block;
-}
-@media only screen and (max-width: 767px) {
-  .left-tabs {
-    border-right: none;
-    padding-right: 0;
-    margin-bottom: 1rem;
-  }
-  .left-tab-section .row {
-    flex-direction: column;
-  }
 }
 .navbar.custom-navbar {
   padding: 0 3% 0 3%;
