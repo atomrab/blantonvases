@@ -990,6 +990,8 @@ body a {
 }
 .metadata-3d .metadata-text {
   flex: 11;
+  font-family: 'HelveticaNeue-medium', sans-serif;
+  color: white;
 }
 .metadata-3d .metadata-icons {
   display: flex;
