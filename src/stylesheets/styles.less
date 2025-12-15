@@ -1817,7 +1817,7 @@ body a {
     }
 
     /* Responsive: stack on smaller screens */
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 1200px) {
       .details-container {
         flex-direction: column;
         gap: 1.5rem;
@@ -1953,32 +1953,198 @@ body a {
 }
 
 //For timeline
+/* Timeline container */
 .timeline {
   position: relative;
-  background-color: white;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px 0;
+  background: #000;
+  /* match page background */
+}
 
-  .back {
-    display: flex;
-    align-items: center;
-    height: 60px;
-    width: 100%;
-    top: 10px;
-    left: 100px;
-    display: flex;
-    padding-left: 5vw;
+/* The vertical line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: #bbb9b9;
+  border-radius: 2px;
+}
 
-    img {
-      height: 15px;
-      object-fit: contain;
-      margin-right: 10px;
-    }
+/* Each event container */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 10px 30px;
+  box-sizing: border-box;
 
-    p {
-      line-height: 60px;
-      text-transform: uppercase;
-      font-weight: 500;
-      margin: 0;
-      padding-top: 1px;
-    }
+  p {
+    font-family: 'HelveticaNeue-medium', sans-serif;
+    font-size: 1rem;
   }
+}
+
+/* Content box inside each item */
+.timeline-item .event {
+  background: #0f0f0f;
+  color: #eee;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.timeline-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.timeline-item h3 {
+  margin: 6px 0;
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: #cfcfcf;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+/* [no longer needed] Date box that sits on the opposite side of the central line 
+      .timeline-item .date {
+        position: absolute;
+        top: 20px;
+        width: 120px;
+        padding: 6px 8px;
+        background: rgba(255,255,255,0.04);
+        color: #ddd;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        line-height: 1.1;
+        z-index: 3;
+      }*/
+
+/* Left side item */
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.left .event {
+  margin-left: auto;
+}
+
+/* For left items: date goes to the right of the center line */
+.timeline-item.left .date {
+  left: 100%;
+  transform: translateX(18px);
+  /* push date to right side of center line */
+  text-align: left;
+}
+
+/* Right side item */
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* For right items: date goes to the left of the center line */
+.timeline-item.right .date {
+  left: 0%;
+  transform: translateX(-138px);
+  /* move date left so it sits on left side of center line */
+  text-align: right;
+}
+
+/* Circle marker at center adjacent to the event box:
+         shift slightly toward the event side so it visually sits next to the event box */
+.timeline-dot {
+  content: '';
+  position: absolute;
+  top: 24px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid #ff8c42;
+  left: 50%;
+  z-index: 2;
+}
+
+.timeline-item.left::before {
+  /* move dot to center line */
+  left: 98.5%;
+}
+
+.timeline-item.right::before {
+  /* move dot toward center line */
+  left: -1.5%;
+}
+
+/* Vertical staggering: offset every even item so the boxes alternate vertically */
+.timeline-item:nth-child(even) {
+  margin-top: 70px;
+}
+
+/*new version of the date box that is absolutely positioned*/
+.timeline-date-clone {
+  position: absolute;
+  width: 120px;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  line-height: 1.1;
+  z-index: 4;
+  white-space: nowrap;
+}
+
+/* Responsive: stack items on small screens */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+    text-align: left;
+  }
+
+  .timeline-item .event {
+    margin: 0;
+  }
+
+  .timeline-item::before {
+    left: 20px;
+    transform: translateX(0);
+  }
+
+  .timeline-item .date {
+    left: 40px;
+    transform: translateX(0);
+  }
+}
+
+/* hide original date boxes; JS-created clones remain visible */
+.timeline-item .date {
+  display: none;
+  /* hide original dates — JS clones remain visible */
 }
