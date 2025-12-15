@@ -2167,3 +2167,63 @@ body a {
   display: none;
   /* hide original dates — JS clones remain visible */
 }
+
+/* About/Narrative Hero Video Section */
+.about-video {
+  position: relative;
+  width: 100%;
+  height: 55vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .video-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .video-title {
+    position: absolute;
+    bottom: 3rem;
+    left: 6rem;
+    z-index: 2;
+    font-family: 'Lovelace-light', serif;
+    font-size: 10rem;
+    color: #colors[accent];
+    text-align: left;
+    margin: 0;
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+    font-weight: normal;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+
+    @media only screen and (max-width: 768px) {
+      font-size: 4rem;
+      bottom: 2rem;
+      left: 2rem;
+    }
+
+    @media only screen and (max-width: 480px) {
+      font-size: 2.5rem;
+      bottom: 1.5rem;
+      left: 1.5rem;
+    }
+  }
+}
