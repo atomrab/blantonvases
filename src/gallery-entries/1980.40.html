@@ -13,11 +13,29 @@
     crossorigin="anonymous"> -->
 
   <!-- custom CSS -->
-  <link rel="stylesheet" href="./../stylesheets/styles.css" />
+  <link rel="stylesheet" href="../stylesheets/styles.css" />
   <!-- bootstrap CSS -->
-  <link rel="stylesheet" href="./../stylesheets/bootstrap.css" />
-
+  <link rel="stylesheet" href="../stylesheets/bootstrap.css" />
   <title>Red-Figure Bell Krater</title>
+
+  <!--STYLESHEET-->
+  <link type="text/css" rel="stylesheet" href="../../stylesheet/3dhop.css" />
+  <!--SPIDERGL-->
+  <script type="text/javascript" src="../../js/spidergl.js"></script>
+  <!--JQUERY-->
+  <script type="text/javascript" src="../../js/jquery.js"></script>
+  <!--PRESENTER-->
+  <script type="text/javascript" src="../../js/presenter.js"></script>
+  <!--3D MODELS LOADING AND RENDERING-->
+  <script type="text/javascript" src="../../js/nexus.js"></script>
+  <script type="text/javascript" src="../../js/ply.js"></script>
+  <!--TRACKBALLS-->
+  <script type="text/javascript" src="../../js/trackball_turntable.js"></script>
+  <script type="text/javascript" src="../../js/trackball_turntable_pan.js"></script>
+  <script type="text/javascript" src="../../js/trackball_pantilt.js"></script>
+  <script type="text/javascript" src="../../js/trackball_sphere.js"></script>
+  <!--UTILITY-->
+  <script type="text/javascript" src="../../js/init.js"></script>
 </head>
 
 <body>
@@ -164,6 +182,9 @@
                 Fund
                 and the James R. Dougherty, Jr. Foundation. The piece originates from the classical period of ancient
                 Greece and has been part of the university's collection since its acquisition.</p>
+
+
+
               <p>The provenance of ancient Greek ceramics is often difficult to trace, but this particular object has
                 been
                 documented in the museum's records as part of their Greek vases collection.</p>
@@ -185,33 +206,271 @@
     </div>
     <!-- end content -->
 
-    <!-- start footer -->
-    <div class="underline"></div>
-    <div class="footer">
-      Copyright © 2025 Department of Classics of the University of Texas at Austin and Blanton Museum of Art <br>
-      All
-      models are made available under a CC-0 license <br> For questions email:
-      arabinow at utexas.edu
+    <!-- Map Image -->
+    <div class="map-image">
+      <div class="map-title">Map Image</div>
+      <figure class="provenance-map" style="margin:1rem 0;">
+        <img src="../assets/map-assets/Corinth.png" alt="Map showing Corinth"
+          style="width:100%;height:auto;display:block;" />
+        <figcaption style="font-size:0.9rem;color:#666;margin-top:0.5rem;">Location shown: Corinth</figcaption>
+      </figure>
     </div>
-    <!-- end footer -->
-    <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"></script>
+    <div class="content-3d-window">
+      <div id="3dhop" class="tdhop" onmousedown="if (event.preventDefault) event.preventDefault()">
+        <div id="tdhlg"></div>
+        <div id="toolbar">
+          <img id="home" title="Home" src="../../skins/dark/home.png" /><br />
+          <!--ZOOM-->
+          <img id="zoomin" title="Zoom In" src="../../skins/dark/zoomin.png" /><br />
+          <img id="zoomout" title="Zoom Out" src="../../skins/dark/zoomout.png" /><br />
+          <!--ZOOM-->
+          <!--LIGHTING-->
+          <img id="lighting_off" title="Enable Lighting" src="../../skins/dark/lighting_off.png"
+            style="position:absolute; visibility:hidden;" />
+          <img id="lighting" title="Disable Lighting" src="../../skins/dark/lighting.png" /><br />
+          <!--LIGHTING-->
+          <!--LIGHT-->
+          <img id="light_on" title="Disable Light Control" src="../../skins/dark/lightcontrol_on.png"
+            style="position:absolute; visibility:hidden;" />
+          <img id="light" title="Enable Light Control" src="../../skins/dark/lightcontrol.png" /><br />
+          <!--LIGHT-->
+          <!--MEASURE-->
+          <img id="measure_on" title="Disable Measure Tool" src="../../skins/dark/measure_on.png"
+            style="position:absolute; visibility:hidden;" />
+          <img id="measure" title="Enable Measure Tool" src="../../skins/dark/measure.png" /><br />
+          <!--MEASURE-->
+          <!--POINT PICKING-->
+          <img id="pick_on" title="Disable PickPoint Mode" src="../../skins/dark/pick_on.png"
+            style="position:absolute; visibility:hidden;" />
+          <img id="pick" title="Enable PickPoint Mode" src="../../skins/dark/pick.png" /><br />
+          <!--POINT PICKING-->
+          <!--SECTIONS-->
+          <img id="sections_on" title="Disable Plane Sections" src="../../skins/dark/sections_on.png"
+            style="position:absolute; visibility:hidden;" />
+          <img id="sections" title="Enable Plane Sections" src="../../skins/dark/sections.png" /><br />
+          <!--SECTIONS-->
+          <!--COLOR-->
+          <img id="color_on" title="Disable Solid Color" src="../../skins/dark/color_on.png"
+            style="position:absolute; visibility:hidden;" />
+          <img id="color" title="Enable Solid Color" src="../../skins/dark/color.png" /><br />
+          <!--COLOR-->
+          <!--CAMERA-->
+          <img id="perspective" title="Perspective Camera" src="../../skins/dark/perspective.png"
+            style="position:absolute; visibility:hidden;" />
+          <img id="orthographic" title="Orthographic Camera" src="../../skins/dark/orthographic.png" /><br />
+          <!--CAMERA-->
+          <!--SCREENSHOT-->
+          <img id="screenshot" title="Save Screenshot" src="../../skins/dark/screenshot.png" /><br />
+          <!--SCREENSHOT-->
+          <!--FULLSCREEN-->
+          <img id="full_on" title="Exit Full Screen" src="../../skins/dark/full_on.png"
+            style="position:absolute; visibility:hidden;" />
+          <img id="full" title="Full Screen" src="../../skins/dark/full.png" />
+          <!--FULLSCREEN-->
+        </div>
 
-    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <!--MEASURE-->
+        <div id="measure-box" class="output-box">Measured length
+          <hr /><span id="measure-output" class="output-text" onmousedown="event.stopPropagation()">0.0</span>
+        </div>
+        <!--MEASURE-->
+
+        <!--POINT PICKING-->
+        <div id="pickpoint-box" class="output-box">XYZ picked point
+          <hr /><span id="pickpoint-output" class="output-text" onmousedown="event.stopPropagation()">[ 0 , 0 , 0
+            ]</span>
+        </div>
+        <!--POINT PICKING-->
+
+        <!--SECTIONS-->
+        <div id="sections-box" class="output-box">
+          <table class="output-table" onmousedown="event.stopPropagation()">
+            <tr>
+              <td>Plane</td>
+              <td>Position</td>
+              <td>Flip</td>
+            </tr>
+            <tr>
+              <td><img id="xplane_on" title="Disable X Axis Section" src="../../skins/icons/sectionX_on.png"
+                  onclick="sectionxSwitch()" style="position:absolute; visibility:hidden; border:1px inset;" />
+                <img id="xplane" title="Enable X Axis Section" src="../../skins/icons/sectionX.png"
+                  onclick="sectionxSwitch()" /><br />
+              </td>
+              <td><input id="xplaneSlider" class="output-input" type="range" title="Move X Axis Section Position" />
+              </td>
+              <td><input id="xplaneFlip" class="output-input" type="checkbox" title="Flip X Axis Section Direction" />
+              </td>
+            </tr>
+            <tr>
+              <td><img id="yplane_on" title="Disable Y Axis Section" src="../../skins/icons/sectionY_on.png"
+                  onclick="sectionySwitch()" style="position:absolute; visibility:hidden; border:1px inset;" />
+                <img id="yplane" title="Enable Y Axis Section" src="../../skins/icons/sectionY.png"
+                  onclick="sectionySwitch()" /><br />
+              </td>
+              <td><input id="yplaneSlider" class="output-input" type="range" title="Move Y Axis Section Position" />
+              </td>
+              <td><input id="yplaneFlip" class="output-input" type="checkbox" title="Flip Y Axis Section Direction" />
+              </td>
+            </tr>
+            <tr>
+              <td><img id="zplane_on" title="Disable Z Axis Section" src="../../skins/icons/sectionZ_on.png"
+                  onclick="sectionzSwitch()" style="position:absolute; visibility:hidden; border:1px inset;" />
+                <img id="zplane" title="Enable Z Axis Section" src="../../skins/icons/sectionZ.png"
+                  onclick="sectionzSwitch()" /><br />
+              </td>
+              <td><input id="zplaneSlider" class="output-input" type="range" title="Move Y Axis Section Position" />
+              </td>
+              <td><input id="zplaneFlip" class="output-input" type="checkbox" title="Flip Z Axis Section Direction" />
+              </td>
+            </tr>
+          </table>
+          <table class="output-table" onmousedown="event.stopPropagation()" style="text-align:right;">
+            <tr>
+              <td>Show planes<input id="showPlane" class="output-input" type="checkbox" title="Show Section Planes"
+                  style="bottom:-3px;" /></td>
+              <td>Show edges<input id="showBorder" class="output-input" type="checkbox" title="Show Section Edges"
+                  style="bottom:-3px;" /></td>
+            </tr>
+          </table>
+        </div>
+        <!--SECTIONS-->
+
+        <canvas id="draw-canvas" style="background-image: url(../../skins/backgrounds/light.jpg)" />
+      </div>
+
+    </div>
+  </div>
+
+  <!-- start footer -->
+  <div class="underline"></div>
+  <div class="footer">
+    Copyright © 2025 Department of Classics of the University of Texas at Austin and Blanton Museum of Art <br>
+    All
+    models are made available under a CC-0 license <br> For questions email:
+    arabinow at utexas.edu
+  </div>
+  <!-- end footer -->
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> -->
 
-    <script type="text/javascript" src="../scripts/global.js"></script>
-    <script src="../scripts/gallery-viewer.js"></script>
-    <script src="../scripts/object-details.js"></script>
+  <script type="text/javascript" src="../scripts/global.js"></script>
+  <script src="../scripts/gallery-viewer.js"></script>
+  <script src="../scripts/object-details.js"></script>
 </body>
+
+<script type="text/javascript">
+  var presenter = null;
+
+  function setup3dhop() {
+    presenter = new Presenter("draw-canvas");
+
+    presenter.setScene({
+      meshes: {
+        "mesh_1": { url: "../../models/1980_40_bellkrater_or.nxz" }
+      },
+      modelInstances: {
+        "model_1": {
+          mesh: "mesh_1",
+          color: [0.8, 0.7, 0.75]
+        }
+      },
+      trackball: {
+        type: TurntablePanTrackball,
+        trackOptions: {
+          startPhi: 35.0,
+          startTheta: 15.0,
+          startDistance: 2.5,
+          minMaxPhi: [-180, 180],
+          minMaxTheta: [-30.0, 70.0],
+          minMaxDist: [0.5, 3.0]
+        }
+      }
+    });
+
+    //--MEASURE--
+    presenter._onEndMeasurement = onEndMeasure;
+    //--MEASURE--
+
+    //--POINT PICKING--
+    presenter._onEndPickingPoint = onEndPick;
+    //--POINT PICKING--
+
+    //--SECTIONS--
+    sectiontoolInit();
+    //--SECTIONS--
+  }
+
+  function actionsToolbar(action) {
+    if (action == 'home') presenter.resetTrackball();
+    //--FULLSCREEN--
+    else if (action == 'full' || action == 'full_on') fullscreenSwitch();
+    //--FULLSCREEN--
+    //--ZOOM--
+    else if (action == 'zoomin') presenter.zoomIn();
+    else if (action == 'zoomout') presenter.zoomOut();
+    //--ZOOM--
+    //--LIGHTING--
+    else if (action == 'lighting' || action == 'lighting_off') { presenter.enableSceneLighting(!presenter.isSceneLightingEnabled()); lightingSwitch(); }
+    //--LIGHTING--
+    //--LIGHT--
+    else if (action == 'light' || action == 'light_on') { presenter.enableLightTrackball(!presenter.isLightTrackballEnabled()); lightSwitch(); }
+    //--LIGHT--
+    //--CAMERA--
+    else if (action == 'perspective' || action == 'orthographic') { presenter.toggleCameraType(); cameraSwitch(); }
+    //--CAMERA--
+    //--COLOR--
+    else if (action == 'color' || action == 'color_on') { presenter.toggleInstanceSolidColor(HOP_ALL, true); colorSwitch(); }
+    //--COLOR--
+    //--MEASURE--
+    else if (action == 'measure' || action == 'measure_on') { presenter.enableMeasurementTool(!presenter.isMeasurementToolEnabled()); measureSwitch(); }
+    //--MEASURE--
+    //--POINT PICKING--
+    else if (action == 'pick' || action == 'pick_on') { presenter.enablePickpointMode(!presenter.isPickpointModeEnabled()); pickpointSwitch(); }
+    //--POINT PICKING--
+    //--SCREENSHOT--
+    else if (action == 'screenshot') presenter.saveScreenshot();
+    //--SCREENSHOT--
+    //--SECTIONS--
+    else if (action == 'sections' || action == 'sections_on') { sectiontoolReset(); sectiontoolSwitch(); }
+    //--SECTIONS--
+  }
+
+  //--MEASURE--
+  function onEndMeasure(measure) {
+    // measure.toFixed(2) sets the number of decimals when displaying the measure
+    // depending on the model measure units, use "mm","m","km" or whatever you have
+    $('#measure-output').html(measure.toFixed(2) + "mm");
+  }
+  //--MEASURE--
+
+  //--PICKPOINT--
+  function onEndPick(point) {
+    // .toFixed(2) sets the number of decimals when displaying the picked point	
+    var x = point[0].toFixed(2);
+    var y = point[1].toFixed(2);
+    var z = point[2].toFixed(2);
+    $('#pickpoint-output').html("[ " + x + " , " + y + " , " + z + " ]");
+  }
+  //--PICKPOINT--	
+
+  $(document).ready(function () {
+    init3dhop();
+
+    setup3dhop();
+  });
+</script>
 
 </html>
