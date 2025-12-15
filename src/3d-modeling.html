@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+    crossorigin="anonymous"> -->
+
+  <!-- custom CSS -->
+  <link rel="stylesheet" href="./stylesheets/styles.css" />
+  <!-- bootstrap CSS -->
+  <link rel="stylesheet" href="./stylesheets/bootstrap.css" />
+
+  <title>Credit</title>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-xxl navbar-dark custom-navbar">
+    <!-- <div class="brand-nav-wrapper"> -->
+    <a class="col-md-4 navbar-brand custom-brand" href="./index.html">
+      <div class="logo-and-brand">
+        <div class="logo-div">
+          <img class="" src="./assets/logo.svg" />
+        </div>
+        <div class="brand-div">Blanton VASE</div>
+      </div>
+    </a>
+
+    <!-- Hamburger button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible nav items -->
+    <div class="collapse navbar-collapse offset-md-2 justify-content-end align-self-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./showcase.html">Exhibit</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./collection.html">Collection</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./timeline.html">3D Modeling</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./timeline.html">Timeline</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="underline"></div>
+  <!-- end navbar -->
+
+
+  <!-- Hero video (50vh × 100vw) -->
+  <section class="about-video" aria-hidden="false">
+    <video id="about-hero-video" autoplay muted loop playsinline
+      style="width:100vw; height:55vh; object-fit:cover; display:block;">
+      <source src="./assets/videos/header_krater.mp4" type="video/mp4">
+    </video>
+    <div class="video-mask" aria-hidden="true"></div>
+  </section>
+
+
+  <!-- Left-tab section -->
+  <section class="left-tab-section">
+    <div class="container">
+      <div class="row">
+        <aside class="col-md-3 left-tabs" role="tablist" aria-orientation="vertical">
+          <button class="lt-tab active" data-target="panel-1" aria-selected="true">Why 3D Modeling?</button>
+          <button class="lt-tab" data-target="panel-2">Methods and Process</button>
+          <button class="lt-tab" data-target="panel-3">3D Models and Print Files</button>
+        </aside>
+
+        <div class="col-md-9 left-tab-content">
+          <div class="lt-pane active" id="panel-1">
+            <h2 class="lt-title">Why 3D Modeling?</h2>
+            <p>3D models offer a tangible and experiential way to learn about objects from the past. They provide an opportunity to handle recreated ancient vases both virtually and physically without risking damage to the original artifact. The vase can be viewed from all angles, including from behind and underneath which are rarely possible in-person at a museum. Research has suggested that viewers are able to gain a better understanding of the unique details of an artifact when interacting with texturized 3D models versus 2D pictures (1). 3D model viewing platforms allow the user to magnify the object, add and remove texture, change the lighting, and measure. Once a model has been captured, it can be reproduced in physical form using 3D printing. This adds tremendous value in communicating the original scale, curves, and overall shape of a vase. It also promotes accessibility for people with disabilities by providing a physical model of the vase.
+            </p>
+            <p>(1) Galeazzi, Fabrizio, Paola Di Giuseppantonio Di Franco, and Justin L. Matthews. 2015. “Comparing 2D Pictures with 3D Replicas for the Digital Preservation and Analysis of Tangible Heritage.” Museum Management and Curatorship 30 (5): 462–83. doi:10.1080/09647775.2015.1042515.</p>
+          </div>
+          <div class="lt-pane" id="panel-2">
+            <h2 class="lt-title">The 3D Modeling Process</h2>
+            <p>CALPIS 3D uses photogrammetric imaging technology to capture and produce 3D models. This involves photographing an object from many different angles and feeding that information into a software program called AgiSoft Metashape. The quality and precision of the model depends on the capture session, especially the lighting, camera positioning, and whether the object is completely in focus. Instead of walking around the object and taking pictures, the camera is set on a fixed tripod to minimize changes in these factors. </p>
+            <p>The object is then rotated 10 degrees on a turntable as the vase is systematically photographed from 36 different angles. This process is repeated two more times as the camera position is moved to capture high angle and low angle shots.</p>
+            <p>The Metashape program then processes and uses this photographic data to reconstruct a three dimensional scene and produce a virtual model of the object. First, it aligns all the images and calculates the position from where each picture was taken in three dimensional space. Next, it identifies a cloud of points across the images that correspond to the object. It then builds a mesh that connects these points and gives the model its surface. Finally, it can add a texture to the model so its surface reflects the surface of the original object (2).</p>
+            <p>CALPIS 3D also used LiDAR technology to capture models of several vases. We used the Scaniverse app with an iPhone 16 Pro LiDAR sensor to capture detailed digital models for 3D reconstruction. LiDAR (Light Detection and Ranging) is a method that uses pulsed laser light to build high-resolution, three-dimensional point clouds that can be used to create models and maps of objects and environments. While LiDAR is traditionally associated with crewed-aircraft or terrestrial data collection, lidar sensors have been successfully incorporated into much smaller platforms due to improvements in form factor compression. Apple's lidar sensor, available only on Pro models of iPhone and iPad 12 onwards, uses lasers to measure depth for several improvements including better autofocus, improved low-light photos, and detailed 3D scanning. While photogrammetry creates highly detailed renderings of objects in 3D space, mobile lidar provides incredibly fast and comparable digital models for field excavation and field lab approaches with a much lower cost to entry over traditional photogrammetry approaches.</p>
+            <p> Photogrammetric imaging typically takes more time, but often produces higher quality models. Scaniverse LiDAR is more effective for capturing larger objects like the Lebes Gamikos, which cannot be moved and rotated as easily as smaller objects. Under proper lighting conditions, both of these are effective approaches to 3D modeling.</p>
+            <p> (2) Schroer, Carla, Mark Mudge, and Marlin Lum. "Photogrammetry Training: Practical, Scientific Use of Photogrammetry in Cultural Heritage." Training Manual (2017).</p>
+        </div>
+          <div class="lt-pane" id="panel-3">
+            <p>Equipment: placeholder content describing equipment and methods used.</p>
+          </div>
+          <div class="lt-pane" id="panel-4">
+            <p>Related Projects: placeholder list and links to similar work.</p>
+          </div>
+          <div class="lt-pane" id="panel-5">
+            <p>Further resources and bibliography placeholder text.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- start footer -->
+  <div class="underline"></div>
+  <div class="footer">
+    Copyright © 2025 Department of Classics of the University of Texas at Austin and Blanton Museum of Art <br> All
+    models are made available under a CC-0 license <br> For questions email:
+    arabinow at utexas.edu
+  </div>
+  <!-- end footer -->
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+  <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> -->
+
+  <script type="text/javascript" src="../scripts/global.js"></script>
+  <script src="../scripts/gallery-viewer.js"></script>
+  <script src="./scripts/collection.js"></script>
+  <script src="./scripts/left-tabs.js"></script>
+</body>
+
+</html>
