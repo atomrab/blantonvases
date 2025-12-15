@@ -3,6 +3,8 @@ Repo for the development of an online project focused on the Greek vases at the 
 
 [Index Page](src/index.html)
 
+[Test 3D Object Page: 1980.40](src/gallery-entries/1980.40.html)
+
 [3DHOP test page 1](3DHOP_all_tools.html)
 
 [3DHOP test page 2](3dtest2.html)
