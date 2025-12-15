@@ -601,6 +601,10 @@ body a {
   margin: 2rem 10vw 4rem 10vw;
   align-items: start;
 }
+/* allow pages to opt-in to three-up grid */
+.collection-gallery.three-up {
+  grid-template-columns: repeat(3, 1fr);
+}
 /* Card */
 .gallery-card {
   display: flex;
