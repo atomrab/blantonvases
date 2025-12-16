@@ -43,13 +43,13 @@
     <div class="collapse navbar-collapse offset-md-2 justify-content-end align-self-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="./showcase.html">Exhibit</a>
+          <a class="nav-link" href="./showcase.html">Narrative</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./collection.html">Collection</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./#.html">3D Modeling</a>
+          <a class="nav-link" href="./3d-modeling.html">3D Modeling</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./timeline.html">Timeline</a>
@@ -87,20 +87,58 @@
         <div class="col-md-9 left-tab-content">
           <div class="lt-pane active" id="panel-1">
             <h2 class="lt-title">Why 3D Modeling?</h2>
-            <p>3D models offer a tangible and experiential way to learn about objects from the past. They provide an opportunity to handle recreated ancient vases both virtually and physically without risking damage to the original artifact. The vase can be viewed from all angles, including from behind and underneath which are rarely possible in-person at a museum. Research has suggested that viewers are able to gain a better understanding of the unique details of an artifact when interacting with texturized 3D models versus 2D pictures (1). 3D model viewing platforms allow the user to magnify the object, add and remove texture, change the lighting, and measure. Once a model has been captured, it can be reproduced in physical form using 3D printing. This adds tremendous value in communicating the original scale, curves, and overall shape of a vase. It also promotes accessibility for people with disabilities by providing a physical model of the vase.
+            <p>3D models offer a tangible and experiential way to learn about objects from the past. They provide an
+              opportunity to handle recreated ancient vases both virtually and physically without risking damage to the
+              original artifact. The vase can be viewed from all angles, including from behind and underneath which are
+              rarely possible in-person at a museum. Research has suggested that viewers are able to gain a better
+              understanding of the unique details of an artifact when interacting with texturized 3D models versus 2D
+              pictures (1). 3D model viewing platforms allow the user to magnify the object, add and remove texture,
+              change the lighting, and measure. Once a model has been captured, it can be reproduced in physical form
+              using 3D printing. This adds tremendous value in communicating the original scale, curves, and overall
+              shape of a vase. It also promotes accessibility for people with disabilities by providing a physical model
+              of the vase.
             </p>
-            <p>(1) Galeazzi, Fabrizio, Paola Di Giuseppantonio Di Franco, and Justin L. Matthews. 2015. “Comparing 2D Pictures with 3D Replicas for the Digital Preservation and Analysis of Tangible Heritage.” Museum Management and Curatorship 30 (5): 462–83. doi:10.1080/09647775.2015.1042515.</p>
+            <p>(1) Galeazzi, Fabrizio, Paola Di Giuseppantonio Di Franco, and Justin L. Matthews. 2015. “Comparing 2D
+              Pictures with 3D Replicas for the Digital Preservation and Analysis of Tangible Heritage.” Museum
+              Management and Curatorship 30 (5): 462–83. doi:10.1080/09647775.2015.1042515.</p>
           </div>
           <div class="lt-pane" id="panel-2">
             <h2 class="lt-title">The 3D Modeling Process</h2>
-            <p>CALPIS 3D uses photogrammetric imaging technology to capture and produce 3D models. This involves photographing an object from many different angles and feeding that information into a software program called AgiSoft Metashape. The quality and precision of the model depends on the capture session, especially the lighting, camera positioning, and whether the object is completely in focus. Instead of walking around the object and taking pictures, the camera is set on a fixed tripod to minimize changes in these factors. </p>
-            <img src="assets/Vase Capture 1.JPG" alt="Adam Rabinowitz photographing the Blanton Calpis" style="width:100%; height:auto;">
-            <p>The object is then rotated 10 degrees on a turntable as the vase is systematically photographed from 36 different angles. This process is repeated two more times as the camera position is moved to capture high angle and low angle shots.</p>
-            <p>The Metashape program then processes and uses this photographic data to reconstruct a three dimensional scene and produce a virtual model of the object. First, it aligns all the images and calculates the position from where each picture was taken in three dimensional space. Next, it identifies a cloud of points across the images that correspond to the object. It then builds a mesh that connects these points and gives the model its surface. Finally, it can add a texture to the model so its surface reflects the surface of the original object (2).</p>
-            <p>CALPIS 3D also used LiDAR technology to capture models of several vases. We used the Scaniverse app with an iPhone 16 Pro LiDAR sensor to capture detailed digital models for 3D reconstruction. LiDAR (Light Detection and Ranging) is a method that uses pulsed laser light to build high-resolution, three-dimensional point clouds that can be used to create models and maps of objects and environments. While LiDAR is traditionally associated with crewed-aircraft or terrestrial data collection, lidar sensors have been successfully incorporated into much smaller platforms due to improvements in form factor compression. Apple's lidar sensor, available only on Pro models of iPhone and iPad 12 onwards, uses lasers to measure depth for several improvements including better autofocus, improved low-light photos, and detailed 3D scanning. While photogrammetry creates highly detailed renderings of objects in 3D space, mobile lidar provides incredibly fast and comparable digital models for field excavation and field lab approaches with a much lower cost to entry over traditional photogrammetry approaches.</p>
-            <p> Photogrammetric imaging typically takes more time, but often produces higher quality models. Scaniverse LiDAR is more effective for capturing larger objects like the Lebes Gamikos, which cannot be moved and rotated as easily as smaller objects. Under proper lighting conditions, both of these are effective approaches to 3D modeling.</p>
-            <p> (2) Schroer, Carla, Mark Mudge, and Marlin Lum. "Photogrammetry Training: Practical, Scientific Use of Photogrammetry in Cultural Heritage." Training Manual (2017).</p>
-        </div>
+            <p>CALPIS 3D uses photogrammetric imaging technology to capture and produce 3D models. This involves
+              photographing an object from many different angles and feeding that information into a software program
+              called AgiSoft Metashape. The quality and precision of the model depends on the capture session,
+              especially the lighting, camera positioning, and whether the object is completely in focus. Instead of
+              walking around the object and taking pictures, the camera is set on a fixed tripod to minimize changes in
+              these factors. </p>
+            <img src="assets/Vase Capture 1.JPG" alt="Adam Rabinowitz photographing the Blanton Calpis"
+              style="width:100%; height:auto;">
+            <p>The object is then rotated 10 degrees on a turntable as the vase is systematically photographed from 36
+              different angles. This process is repeated two more times as the camera position is moved to capture high
+              angle and low angle shots.</p>
+            <p>The Metashape program then processes and uses this photographic data to reconstruct a three dimensional
+              scene and produce a virtual model of the object. First, it aligns all the images and calculates the
+              position from where each picture was taken in three dimensional space. Next, it identifies a cloud of
+              points across the images that correspond to the object. It then builds a mesh that connects these points
+              and gives the model its surface. Finally, it can add a texture to the model so its surface reflects the
+              surface of the original object (2).</p>
+            <p>CALPIS 3D also used LiDAR technology to capture models of several vases. We used the Scaniverse app with
+              an iPhone 16 Pro LiDAR sensor to capture detailed digital models for 3D reconstruction. LiDAR (Light
+              Detection and Ranging) is a method that uses pulsed laser light to build high-resolution,
+              three-dimensional point clouds that can be used to create models and maps of objects and environments.
+              While LiDAR is traditionally associated with crewed-aircraft or terrestrial data collection, lidar sensors
+              have been successfully incorporated into much smaller platforms due to improvements in form factor
+              compression. Apple's lidar sensor, available only on Pro models of iPhone and iPad 12 onwards, uses lasers
+              to measure depth for several improvements including better autofocus, improved low-light photos, and
+              detailed 3D scanning. While photogrammetry creates highly detailed renderings of objects in 3D space,
+              mobile lidar provides incredibly fast and comparable digital models for field excavation and field lab
+              approaches with a much lower cost to entry over traditional photogrammetry approaches.</p>
+            <p> Photogrammetric imaging typically takes more time, but often produces higher quality models. Scaniverse
+              LiDAR is more effective for capturing larger objects like the Lebes Gamikos, which cannot be moved and
+              rotated as easily as smaller objects. Under proper lighting conditions, both of these are effective
+              approaches to 3D modeling.</p>
+            <p> (2) Schroer, Carla, Mark Mudge, and Marlin Lum. "Photogrammetry Training: Practical, Scientific Use of
+              Photogrammetry in Cultural Heritage." Training Manual (2017).</p>
+          </div>
           <div class="lt-pane" id="panel-3">
             <h2 class="lt-title">3D Models and Print Files</h2>
             <p>Equipment: placeholder content describing equipment and methods used.</p>
